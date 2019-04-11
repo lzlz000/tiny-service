@@ -1,4 +1,4 @@
 # tiny-service
 
-用于理微服务相关问题
+基于spring-cloud全家桶的demo
 
