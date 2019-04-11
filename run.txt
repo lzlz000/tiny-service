@@ -1,0 +1,16 @@
+# eureka1
+java -jar -Dspring.profiles.active=eureka1 ./eureka/target/eureka-0.0.1-SNAPSHOT.jar
+# eureka2
+java -jar -Dspring.profiles.active=eureka2 ./eureka/target/eureka-0.0.1-SNAPSHOT.jar 
+
+# docker 部署rabbitmq
+docker run -d -p 5672:5672 -p 15672:15672 -v `pwd`/data:/root/rabbit --name myRabbit -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin rabbitmq:3.7-management
+
+
+# 赋予数据库权限
+CREATE USER 'tiny'@'%' IDENTIFIED BY 'QWERDF123456';
+grant all privileges on `tiny-service`.* to 'tiny'@'%';
+--  REVOKE all privileges ON `tiny-service`.* FROM 'tiny'@'%'; -- 删除指定权限
+flush privileges; 
+SHOW GRANTS FOR 'tiny'@'%'; -- 查看现有权限
+
