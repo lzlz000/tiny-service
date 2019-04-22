@@ -1,4 +1,4 @@
-package lzlz000.product.client;
+package lzlz000.consumer.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

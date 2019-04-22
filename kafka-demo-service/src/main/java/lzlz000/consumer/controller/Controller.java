@@ -1,6 +1,6 @@
-package lzlz000.product.controller;
+package lzlz000.consumer.controller;
 
-import lzlz000.product.client.ProductClient;
+import lzlz000.consumer.client.ProductClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ public class Controller {
 
     @GetMapping("name")
     public String echo(){
-        return "product-service";
+        return "consumer-service";
     }
 
     @GetMapping("name1")
