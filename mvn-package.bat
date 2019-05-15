@@ -6,11 +6,11 @@ cd ../api-gateway
 call mvn package -DskipTests
 cd ../config
 call mvn package -DskipTests
-cd ../consumer
+cd ../product-service
 call mvn package -DskipTests
 cd ../eureka
 call mvn package -DskipTests
-cd ../product
+cd ../consumer-service
 call mvn package -DskipTests
 
 pause
